@@ -20,7 +20,9 @@ public class XLBufferedReader extends BufferedReader {
             while (ready()) {
                 String string = readLine();
                 int i = string.indexOf('=');
-                map.put(string.substring(0, i),  SlotFactory.build(string.substring(i+1, string.length())));
+                String address = string.substring(0, i);
+                String data = string.substring(i+1, string.length());
+                map.put(address, SlotFactory.build(data));
                 
             }
         } catch (Exception e) {

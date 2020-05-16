@@ -97,9 +97,13 @@ public class Sheet extends Observable implements Environment {
 	}
 
 	public void load(String path) {
+		Map<String, Slot> temp = new HashMap();
 		try {
 			XLBufferedReader bufferedReader = new XLBufferedReader(path);
-			bufferedReader.load(slots);
+			bufferedReader.load(temp);
+			for(Entry<String, Slot> row: temp.entrySet()) {
+				addSlot(row.getKey(), row.getValue().toString());
+			}
 		} catch (Exception e) {
 			status = e.getMessage();
 			e.printStackTrace();
