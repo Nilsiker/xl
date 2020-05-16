@@ -1,6 +1,7 @@
 package gui;
 
 import model.Sheet;
+import util.XLException;
 
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -29,7 +30,12 @@ public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
 	@Override
 	public void update(Observable o, Object arg) {
 		if(sheet.contains(address)){
-			setText(sheet.get(address).getValueString(sheet));
+			try{
+				setText(sheet.get(address).getValueString(sheet));
+			}catch (XLException e){
+				sheet.setStatus(e.getMessage());
+				setText("ERROR");
+			}
 		}else{
 			setText("");
 		}

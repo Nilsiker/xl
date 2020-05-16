@@ -56,7 +56,7 @@ public class Sheet extends Observable implements Environment {
 		slots.put(address, new ErrorSlot());
 		try {
 			slot.getValue(this);
-			status = "Slot updated!";
+			status = "Slots updated!";
 		} catch (XLException | NullPointerException e) { // den här notationen är skitball!
 			status = e.getMessage();
 			if (previous == null)
@@ -74,30 +74,35 @@ public class Sheet extends Observable implements Environment {
 			return slots.get(slotName).getValue(this);
 		} else {
 			return 0;
-//            throw new XLException("Non-existent slot.");
 		}
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public String getStatus() {
 		return status;
 	}
 
-	public void Save(String path) {
+	public void save(String path) {
 
 		XLPrintStream stream;
 		try {
 			stream = new XLPrintStream(path);
 			Set<Entry<String, Slot>> set = slots.entrySet();
 			stream.save(set);
+			status = "Saved file!";
 		} catch (FileNotFoundException e) {
 			status = e.getMessage();
 			e.printStackTrace();
 		}
-
+		setChanged();
+		notifyObservers();
 	}
 
 	public void load(String path) {
-		Map<String, Slot> temp = new HashMap();
+		Map<String, Slot> temp = new HashMap<>();
 		try {
 			XLBufferedReader bufferedReader = new XLBufferedReader(path);
 			bufferedReader.load(temp);

@@ -15,7 +15,7 @@ class SaveMenuItem extends OpenMenuItem {
     }
 
     protected void action(String path) throws FileNotFoundException {
-        sheet.Save(path);
+        sheet.save(path);
     }
 
     protected int openDialog(JFileChooser fileChooser) {
