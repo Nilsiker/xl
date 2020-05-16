@@ -23,6 +23,7 @@ public class Editor extends JTextField implements Observer, ActionListener{
         this.sheet = sheet;
         this.currentSlot = currentSlot;
         currentSlot.addObserver(this);
+        sheet.addObserver(this);
     }
 
 	@Override
