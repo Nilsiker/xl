@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ed12c38-f50e-4cfc-91fb-7593faa1d820" name="Default Changelist" comment="">
+    <list default="true" id="0ed12c38-f50e-4cfc-91fb-7593faa1d820" name="Default Changelist" comment="current references ditched, slotlabels assigns listeners to SlotLabel objects to handle CurrentSlot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/CurrentSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/CurrentSlot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/SlotLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SlotLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/menu/SaveMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/menu/SaveMenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Sheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Sheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SlotLabels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SlotLabels.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +160,13 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1589633532610</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="potentially stinky div-by-zero fix when divisor variable gets removed from other expression. Does the trick though..?">
+      <created>1589646828615</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1589646828615</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -177,17 +183,19 @@
     <MESSAGE value="SlotLabel and Editor now updates correctly when picking slot" />
     <MESSAGE value="validating works okay, needs to print more info" />
     <MESSAGE value="fixed validate catch-block. Doesn't mess set nullslots in Map anymore!" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed validate catch-block. Doesn't mess set nullslots in Map anymore!" />
+    <MESSAGE value="potentially stinky div-by-zero fix when divisor variable gets removed from other expression. Does the trick though..?" />
+    <MESSAGE value="current references ditched, slotlabels assigns listeners to SlotLabel objects to handle CurrentSlot" />
+    <option name="LAST_COMMIT_MESSAGE" value="current references ditched, slotlabels assigns listeners to SlotLabel objects to handle CurrentSlot" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="258" key="#Project_Structure" timestamp="1588325056805">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="552" y="258" key="#Project_Structure/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588325056805" />
-    <state x="765" y="299" key="#com.intellij.ide.util.MemberChooser" timestamp="1589544015012">
+    <state x="765" y="299" key="#com.intellij.ide.util.MemberChooser" timestamp="1590053934523">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="765" y="299" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589544015012" />
+    <state x="765" y="299" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1590053934523" />
     <state x="765" y="309" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588605216347" />
     <state x="668" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588324193761">
       <screen x="0" y="0" width="1920" height="1200" />
@@ -197,34 +205,34 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="690" y="347" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588160020661" />
-    <state x="850" y="166" key="CommitChangelistDialog2" timestamp="1589633531958">
+    <state x="545" y="166" key="CommitChangelistDialog2" timestamp="1590054610754">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="850" y="166" key="CommitChangelistDialog2/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589633531958" />
+    <state x="545" y="166" key="CommitChangelistDialog2/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1590054610754" />
     <state x="827" y="127" key="CommitChangelistDialog2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588610182070" />
     <state x="184" y="102" key="DiffContextDialog" timestamp="1588159637102">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="184" y="102" key="DiffContextDialog/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588159637102" />
-    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1589646743796">
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1590054610793">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589646743796" />
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1590054610793" />
     <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588164118155" />
-    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1589646743796">
+    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1590054610793">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589646743796" />
+    <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1590054610793" />
     <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588164118155" />
-    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1589646743796">
+    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1590054610793">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589646743796" />
+    <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1590054610793" />
     <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588164118155" />
-    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1589646743796">
+    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1590054610793">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589646743796" />
+    <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1590054610793" />
     <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588164118155" />
     <state x="507" y="335" key="IDE.errors.dialog" timestamp="1588606030844">
       <screen x="0" y="0" width="1920" height="1200" />
@@ -234,10 +242,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="461" y="242" key="SettingsEditor/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588608531580" />
-    <state x="552" y="322" key="Vcs.Push.Dialog.v2" timestamp="1589633538748">
+    <state x="552" y="322" key="Vcs.Push.Dialog.v2" timestamp="1590054618282">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="322" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589633538748" />
+    <state x="552" y="322" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1590054618282" />
     <state x="552" y="333" key="Vcs.Push.Dialog.v2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588610184994" />
     <state x="769" y="497" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589616905226">
       <screen x="0" y="0" width="1920" height="1160" />

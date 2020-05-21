@@ -4,6 +4,7 @@ import model.Sheet;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
@@ -21,9 +22,17 @@ public class SlotLabels extends GridPanel {
 		}
 		for (int row = 1; row <= rows; row++) {
 			for (char ch = 'A'; ch < 'A' + cols; ch++) {
-				SlotLabel label = new SlotLabel(ch+Integer.toString(row), sheet, current);
+				SlotLabel label = new SlotLabel(ch+Integer.toString(row), sheet);
 				add(label);
 				labelList.add(label);
+				label.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						current.unmark();
+						current.setLabel(label);
+						label.setBackground(Color.YELLOW);
+					}
+				});
 			}
 		}
 

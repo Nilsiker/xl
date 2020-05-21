@@ -3,11 +3,7 @@ import java.awt.*;
 import java.util.Observable;
 
 public class CurrentSlot extends Observable {
-    SlotLabel label;
-
-    public CurrentSlot(){
-
-    }
+    private SlotLabel label;
 
     public void setLabel(SlotLabel label) {
         this.label = label;
